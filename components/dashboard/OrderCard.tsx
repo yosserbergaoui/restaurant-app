@@ -35,7 +35,7 @@ export function OrderCard({ order }: { order: Order }) {
           <span className="text-stone-600 text-xs">#{order.id.slice(-8)}</span>
         </div>
         <div className="text-right">
-          <p className="font-display text-xl text-amber-400">{order.total.toFixed(2)}€</p>
+          <p className="font-display text-xl text-amber-400">{order.total.toFixed(2)}DT</p>
           <p className="text-stone-600 text-xs">
             {new Date(order.createdAt).toLocaleDateString("fr-FR", {
               day: "numeric",
@@ -52,7 +52,7 @@ export function OrderCard({ order }: { order: Order }) {
           <div key={item.id} className="flex items-center gap-2 bg-stone-800 rounded-sm px-3 py-1.5">
             {item.plat.image && (
               <div className="relative w-5 h-5 rounded-full overflow-hidden">
-                <Image src={item.plat.image} alt={item.plat.title} fill className="object-cover" />
+                <Image src={item.plat.image} alt={item.plat.title} fill className="object-cover" sizes="20px" />
               </div>
             )}
             <span className="text-stone-300 text-xs">

@@ -52,7 +52,7 @@ export default async function DashboardPage() {
             { label: "Commandes", value: stats.total, color: "#d6d3d1" },
             { label: "En cours", value: stats.pending, color: "#fbbf24" },
             { label: "Livrées", value: stats.done, color: "#34d399" },
-            { label: "Total dépensé", value: `${stats.spent.toFixed(2)}€`, color: "#fcd34d" },
+            { label: "Total dépensé", value: `${stats.spent.toFixed(2)}DT`, color: "#fcd34d" },
           ].map((s) => (
             <div key={s.label} style={{ backgroundColor: "#292524", border: "1px solid #44403c", borderRadius: "0.125rem", padding: "1.25rem" }}>
               <p style={{ color: "#78716c", fontSize: "0.75rem", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: "0.25rem" }}>

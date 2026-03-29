@@ -60,16 +60,16 @@ export function CartSummary() {
       <div className="divide-y divide-stone-800 max-h-96 overflow-y-auto">
         {items.map((item) => (
           <div key={item.id} className="p-4 flex items-center gap-3">
-            <div className="relative w-12 h-12 rounded-sm overflow-hidden bg-stone-800 flex-shrink-0">
+            <div className="relative w-12 h-12 rounded-sm overflow-hidden bg-stone-800 shrink-0">
               {item.image ? (
-                <Image src={item.image} alt={item.title} fill className="object-cover" />
+                <Image src={item.image} alt={item.title} fill className="object-cover" sizes="48px"/>
               ) : (
                 <div className="w-full h-full flex items-center justify-center text-lg">🍽️</div>
               )}
             </div>
             <div className="flex-1 min-w-0">
               <p className="text-stone-200 text-sm truncate">{item.title}</p>
-              <p className="text-amber-400 text-sm font-display">{item.price.toFixed(2)}€</p>
+              <p className="text-amber-400 text-sm font-display">{item.price.toFixed(2)}DT</p>
             </div>
             <div className="flex items-center gap-1">
               <button
@@ -99,7 +99,7 @@ export function CartSummary() {
       <div className="p-4 border-t border-stone-800">
         <div className="flex justify-between items-center mb-4">
           <span className="text-stone-400 text-sm">Total</span>
-          <span className="font-display text-2xl text-amber-400">{total.toFixed(2)}€</span>
+          <span className="font-display text-2xl text-amber-400">{total.toFixed(2)}DT</span>
         </div>
         <button
           onClick={handleOrder}

@@ -41,7 +41,7 @@ export function RegisterForm() {
           type="text"
           required
           minLength={2}
-          placeholder="Jean Dupont"
+          placeholder="votre nom"
           className="input-field"
         />
       </div>

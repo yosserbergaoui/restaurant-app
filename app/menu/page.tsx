@@ -2,7 +2,6 @@ import { Suspense } from "react";
 import { prisma } from "@/lib/prisma";
 import { PlatCard } from "@/components/menu/PlatCard";
 import { MenuFilters } from "@/components/menu/MenuFilters";
-import { PlatCardSkeleton } from "@/components/menu/PlatCardSkeleton";
 
 export const revalidate = 60;
 export const metadata = { title: "Menu — La Belle Table" };
@@ -77,9 +76,8 @@ export default async function MenuPage({
                 <span style={{ color: "#57534e", fontSize: "0.875rem" }}>{catPlats.length} plats</span>
               </div>
               <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(220px, 1fr))", gap: "1.5rem" }}>
-                {catPlats.map((plat) => (
-                  <PlatCard key={plat.id} plat={plat} />
-                ))}
+                {catPlats.map((plat,index) => (
+<PlatCard key={plat.id} plat={plat} priority={index === 0} />                ))}
               </div>
             </section>
           ))

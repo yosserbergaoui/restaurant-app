@@ -77,7 +77,7 @@ export function PlatForm({ categories, action, defaultValues }: PlatFormProps) {
 
       <div className="grid grid-cols-2 gap-4">
         <div>
-          <label className="block text-stone-400 text-xs uppercase tracking-wide mb-2">Prix (€) *</label>
+          <label className="block text-stone-400 text-xs uppercase tracking-wide mb-2">Prix (DT) *</label>
           <input
             name="price"
             type="number"
@@ -122,7 +122,10 @@ export function PlatForm({ categories, action, defaultValues }: PlatFormProps) {
               alt="Aperçu"
               fill
               className="object-cover"
-              onError={() => setImagePreview("")}
+              sizes="(max-width: 768px) 100vw, 320px"
+              onError={() => setImagePreview("")
+               
+              }
             />
           </div>
         )}

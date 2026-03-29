@@ -45,7 +45,7 @@ export default async function AdminPage() {
           { label: "Plats au menu", value: platsCount, link: "/admin/plats" },
           { label: "Catégories", value: categoriesCount, link: "/admin/plats" },
           { label: "Commandes", value: ordersCount, link: "/admin/commandes" },
-          { label: "Chiffre d'affaires", value: `${(revenue._sum.total ?? 0).toFixed(2)}€`, link: "/admin/commandes" },
+          { label: "Chiffre d'affaires", value: `${(revenue._sum.total ?? 0).toFixed(2)}DT`, link: "/admin/commandes" },
         ].map((s) => (
           <Link key={s.label} href={s.link} style={{ backgroundColor: "#292524", border: "1px solid #44403c", borderRadius: "0.125rem", padding: "1.5rem", textDecoration: "none", display: "block" }}>
             <p style={{ color: "#78716c", fontSize: "0.75rem", textTransform: "uppercase", letterSpacing: "0.05em", marginBottom: "0.5rem" }}>{s.label}</p>
@@ -68,7 +68,7 @@ export default async function AdminPage() {
               </p>
             </div>
             <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
-              <span className="font-display" style={{ color: "#fbbf24", fontSize: "1.25rem" }}>{order.total.toFixed(2)}€</span>
+              <span className="font-display" style={{ color: "#fbbf24", fontSize: "1.25rem" }}>{order.total.toFixed(2)}DT</span>
               <span className="badge" style={{ backgroundColor: STATUS_COLORS[order.status], color: STATUS_TEXT[order.status] }}>
                 {STATUS_LABELS[order.status]}
               </span>

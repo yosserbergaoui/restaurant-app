@@ -10,15 +10,16 @@ type Plat = {
   category: { name: string };
 };
 
-export function PlatCard({ plat }: { plat: Plat }) {
+export function PlatCard({ plat , priority = false }: { plat: Plat;priority?: boolean  }) {
   return (
     <Link href={`/menu/${plat.id}`} className="card-plat group block">
-      <div className="relative aspect-[4/3] overflow-hidden bg-stone-800">
+      <div className="relative aspect-4/3 overflow-hidden bg-stone-800">
         {plat.image ? (
           <Image
             src={plat.image}
             alt={plat.title}
             fill
+            priority={priority}
             className="object-cover group-hover:scale-105 transition-transform duration-500"
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
           />
@@ -41,7 +42,7 @@ export function PlatCard({ plat }: { plat: Plat }) {
         )}
         <div className="flex items-center justify-between">
           <span className="font-display text-xl text-amber-400">
-            {plat.price.toFixed(2)} €
+            {plat.price.toFixed(2)} DT
           </span>
           <span className="text-stone-600 text-xs group-hover:text-amber-400 transition-colors">
             Voir →

@@ -49,7 +49,7 @@ export default async function AdminPlatsPage() {
                   <div style={{ display: "flex", alignItems: "center", gap: "0.75rem" }}>
                     <div style={{ position: "relative", width: "2.5rem", height: "2.5rem", borderRadius: "0.125rem", overflow: "hidden", backgroundColor: "#44403c", flexShrink: 0 }}>
                       {plat.image ? (
-                        <Image src={plat.image} alt={plat.title} fill className="object-cover" />
+                        <Image src={plat.image} alt={plat.title} fill className="object-cover" sizes="40px" />
                       ) : (
                         <div style={{ width: "100%", height: "100%", display: "flex", alignItems: "center", justifyContent: "center" }}>🍽️</div>
                       )}
@@ -61,7 +61,7 @@ export default async function AdminPlatsPage() {
                   <span style={{ color: "#a8a29e", fontSize: "0.875rem" }}>{plat.category.name}</span>
                 </td>
                 <td style={{ padding: "1rem" }}>
-                  <span className="font-display" style={{ color: "#fbbf24", fontSize: "1.125rem" }}>{plat.price.toFixed(2)}€</span>
+                  <span className="font-display" style={{ color: "#fbbf24", fontSize: "1.125rem" }}>{plat.price.toFixed(2)}DT</span>
                 </td>
                 <td style={{ padding: "1rem" }}>
                   <span className="badge" style={{ backgroundColor: plat.available ? "rgba(6,78,59,0.5)" : "rgba(127,29,29,0.5)", color: plat.available ? "#34d399" : "#f87171" }}>

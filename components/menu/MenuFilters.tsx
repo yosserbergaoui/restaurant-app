@@ -34,12 +34,13 @@ export function MenuFilters({ categories }: { categories: Category[] }) {
     <div className="flex flex-col sm:flex-row gap-4 mb-8">
       <div className="relative flex-1 max-w-sm">
         <Search size={14} className="absolute left-3 top-1/2 -translate-y-1/2 text-stone-500" />
+        
         <input
           type="text"
-          placeholder="Rechercher un plat..."
+          placeholder="Qu'est-ce qui vous fait envie..."
           defaultValue={currentSearch}
           onChange={(e) => handleSearch(e.target.value)}
-          className="input-field pl-9 text-sm"
+           className="pl-10 pr-3 py-1 border rounded w-full"
         />
       </div>
 

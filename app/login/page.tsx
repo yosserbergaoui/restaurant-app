@@ -29,7 +29,7 @@ export default async function LoginPage({
 
         {registered && (
           <div style={{ marginBottom: "1.5rem", padding: "0.75rem 1rem", backgroundColor: "rgba(6,78,59,0.3)", border: "1px solid #065f46", borderRadius: "0.125rem", color: "#34d399", fontSize: "0.875rem", textAlign: "center" }}>
-            ✅ Compte créé avec succès. Connectez-vous.
+             Compte créé avec succès. Connectez-vous.
           </div>
         )}
 

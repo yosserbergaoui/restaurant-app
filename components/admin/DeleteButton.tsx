@@ -34,7 +34,7 @@ export function DeleteButton({ id, action, label = "Supprimer" }: DeleteButtonPr
         <div className="fixed inset-0 z-50 flex items-center justify-center bg-stone-950/80 backdrop-blur-sm px-4">
           <div className="bg-stone-900 border border-stone-700 rounded-sm p-6 max-w-sm w-full shadow-2xl">
             <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 rounded-sm bg-red-900/30 flex items-center justify-center flex-shrink-0">
+              <div className="w-10 h-10 rounded-sm bg-red-900/30 flex items-center justify-center shrink-0">
                 <AlertTriangle size={18} className="text-red-400" />
               </div>
               <div>

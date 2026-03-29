@@ -1,7 +1,7 @@
 export function PlatCardSkeleton() {
   return (
     <div className="card-plat">
-      <div className="skeleton aspect-[4/3]" />
+      <div className="skeleton aspect-4/3" />
       <div className="p-4 space-y-3">
         <div className="skeleton h-5 w-3/4 rounded" />
         <div className="skeleton h-3 w-full rounded" />

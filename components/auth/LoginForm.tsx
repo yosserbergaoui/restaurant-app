@@ -80,11 +80,6 @@ export function LoginForm() {
         {loading ? "Connexion..." : "Se connecter"}
       </button>
 
-      <div className="mt-4 p-3 bg-stone-900 border border-stone-800 rounded-sm text-stone-500 text-xs space-y-1">
-        <p className="font-medium text-stone-400">Comptes de démonstration :</p>
-        <p>Admin: admin@restaurant.com / admin123</p>
-        <p>User: user@restaurant.com / user123</p>
-      </div>
     </form>
   );
 }

@@ -57,7 +57,7 @@ export default async function PlatDetailPage({
 
             <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "2rem" }}>
               <span className="font-display" style={{ fontSize: "2.5rem", color: "#fbbf24" }}>
-                {plat.price.toFixed(2)} €
+                {plat.price.toFixed(2)} DT
               </span>
               <span className="badge" style={{ backgroundColor: plat.available ? "rgba(6,78,59,0.5)" : "rgba(127,29,29,0.5)", color: plat.available ? "#34d399" : "#f87171" }}>
                 {plat.available ? "Disponible" : "Indisponible"}

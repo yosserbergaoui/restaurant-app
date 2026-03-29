@@ -52,7 +52,7 @@ export default async function AdminCommandesPage() {
               </div>
               <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
                 <span className="font-display" style={{ fontSize: "1.5rem", color: "#fbbf24" }}>
-                  {order.total.toFixed(2)}€
+                  {order.total.toFixed(2)}DT
                 </span>
                 <OrderStatusSelect orderId={order.id} currentStatus={order.status} />
               </div>
@@ -62,7 +62,7 @@ export default async function AdminCommandesPage() {
               {order.items.map((item) => (
                 <span key={item.id} style={{ backgroundColor: "#1c1917", color: "#a8a29e", fontSize: "0.875rem", padding: "0.25rem 0.75rem", borderRadius: "0.125rem" }}>
                   {item.quantity}× {item.plat.title}
-                  <span style={{ color: "#57534e", marginLeft: "0.5rem" }}>{(item.price * item.quantity).toFixed(2)}€</span>
+                  <span style={{ color: "#57534e", marginLeft: "0.5rem" }}>{(item.price * item.quantity).toFixed(2)}DT</span>
                 </span>
               ))}
             </div>
