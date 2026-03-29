@@ -4,12 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { AddToCartButton } from "@/components/menu/AddToCartButton";
 
-export const revalidate = 60;
-
-export async function generateStaticParams() {
-  const plats = await prisma.plat.findMany({ select: { id: true } });
-  return plats.map((p) => ({ id: p.id }));
-}
+export const dynamic = "force-dynamic";
 
 export default async function PlatDetailPage({
   params,
@@ -34,7 +29,14 @@ export default async function PlatDetailPage({
         <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(300px, 1fr))", gap: "3rem", alignItems: "start" }}>
           <div style={{ position: "relative", aspectRatio: "1", borderRadius: "0.125rem", overflow: "hidden", backgroundColor: "#292524" }}>
             {plat.image ? (
-              <Image src={plat.image} alt={plat.title} fill className="object-cover" sizes="(max-width: 768px) 100vw, 50vw" />
+              <Image
+                src={plat.image}
+                alt={plat.title}
+                fill
+                priority
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 50vw"
+              />
             ) : (
               <div style={{ width: "100%", height: "100%", display: "flex", alignItems: "center", justifyContent: "center", fontSize: "4rem" }}>🍽️</div>
             )}
@@ -57,7 +59,7 @@ export default async function PlatDetailPage({
 
             <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: "2rem" }}>
               <span className="font-display" style={{ fontSize: "2.5rem", color: "#fbbf24" }}>
-                {plat.price.toFixed(2)} DT
+                {plat.price.toFixed(2)} €
               </span>
               <span className="badge" style={{ backgroundColor: plat.available ? "rgba(6,78,59,0.5)" : "rgba(127,29,29,0.5)", color: plat.available ? "#34d399" : "#f87171" }}>
                 {plat.available ? "Disponible" : "Indisponible"}
