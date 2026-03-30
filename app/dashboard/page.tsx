@@ -5,7 +5,7 @@ import { OrderCard } from "@/components/dashboard/OrderCard";
 import { CartSummary } from "@/components/dashboard/CartSummary";
 import Link from "next/link";
 
-export const dynamic = "force-dynamic";
+export const dynamic = "force-dynamic";// Server Side Rendering a chaquee req serv gen html
 export const metadata = { title: "Mon Espace — La Belle Table" };
 
 async function getUserOrders(userId: string) {

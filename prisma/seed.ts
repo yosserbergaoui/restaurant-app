@@ -4,7 +4,7 @@ import bcrypt from "bcryptjs";
 const prisma = new PrismaClient();
 
 async function main() {
-  console.log("🌱 Seeding...");
+  console.log(" Seeding...");
 
   const categories = await Promise.all([
     prisma.category.upsert({ where: { name: "Entrées" }, update: {}, create: { name: "Entrées" } }),
@@ -47,7 +47,7 @@ async function main() {
     await prisma.plat.create({ data: plat });
   }
 
-  console.log("✅ Done!");
+  console.log(" Done!");
   console.log("Admin: admin@restaurant.com / admin123");
   console.log("User:  user@restaurant.com / user123");
 }

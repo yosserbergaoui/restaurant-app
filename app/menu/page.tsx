@@ -3,7 +3,7 @@ import { prisma } from "@/lib/prisma";
 import { PlatCard } from "@/components/menu/PlatCard";
 import { MenuFilters } from "@/components/menu/MenuFilters";
 
-export const revalidate = 60;
+export const revalidate = 60; // Incremental Static Regeneration rare
 export const metadata = { title: "Menu — La Belle Table" };
 
 async function getMenuData() {
